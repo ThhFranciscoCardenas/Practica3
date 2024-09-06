@@ -44,6 +44,7 @@ public class FRMAlumnos {
     private void PoblarComboBox(){
         DefaultComboBoxModel <genero> comboBoxModel = (DefaultComboBoxModel<genero>)Csexo.getModel());
 
+
         for (genero genero  : genero.values()){
             Csexo.addElement(genero);
         }
