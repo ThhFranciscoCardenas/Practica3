@@ -16,6 +16,7 @@ public class FRMAlumnos {
     private JButton cancelarButton;
     private JTextField TXTcurp;
 
+
     public FRMAlumnos() {
         aceptarButton.addActionListener(new ActionListener() {
             @Override
