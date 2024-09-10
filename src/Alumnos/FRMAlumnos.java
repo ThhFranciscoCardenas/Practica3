@@ -11,7 +11,7 @@ public class FRMAlumnos extends JFrame {
     private JTextField TXTcorreo;
     private JTextField TXTnumero;
     private JComboBox Csexo;
-    private JCheckBox cuentaConDiscapacidadCheckBox;
+    public JCheckBox cuentaConDiscapacidadCheckBox;
     private JButton aceptarButton;
     private JButton cancelarButton;
     private JTextField TXTcurp;
@@ -24,7 +24,9 @@ public class FRMAlumnos extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(Pnlprincipal);
         setLocationRelativeTo(null);
+        pack();
         PoblarComboBox();
+
         aceptarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,7 +55,7 @@ public class FRMAlumnos extends JFrame {
         String sexo = Csexo.getSelectedItem().toString();
         Boolean discapacidad = cuentaConDiscapacidadCheckBox.isSelected();
 
-        Alumno dato = new Alumno(nombre,apat,apmat,curp,discapacidad,correo,numero);
+        Alumno dato = new Alumno(nombre,apat,apmat,curp,discapacidad,correo,numero,sexo);
 
         if(botonGuardarListener != null){
             botonGuardarListener.guardando(dato);
@@ -71,11 +73,11 @@ public class FRMAlumnos extends JFrame {
         cuentaConDiscapacidadCheckBox.setSelected(false);
     }
     private void PoblarComboBox(){
-        DefaultComboBoxModel <genero> comboBoxModel = (DefaultComboBoxModel<genero>)Csexo.getModel());
+        DefaultComboBoxModel <genero> comboBoxModel = (DefaultComboBoxModel<genero>)Csexo.getModel();
 
 
-        for (genero genero  : genero.values()){
-            Csexo.addElement(genero);
+        for (genero generoo  : genero.values()){
+            comboBoxModel.addElement(generoo);
         }
     }
 }
