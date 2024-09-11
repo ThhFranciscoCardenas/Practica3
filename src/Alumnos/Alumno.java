@@ -10,10 +10,9 @@ public class Alumno
     private boolean discapacidad;
     private String curp;
     private int edad;
-    private String estadoNacimiento;
     private String sexo;
 
-public Alumno(String nombre, String apPaterno, String apMaterno, String telefono, Boolean discapacidad, String curp, String estadoNacimiento, String sexi)
+public Alumno(String nombre, String apPaterno, String apMaterno,String curp,Boolean discapacidad, String correo, String telefono,  String sexi)
     {
         this.nombre = nombre;
         this.apPaterno = apPaterno;
@@ -22,8 +21,7 @@ public Alumno(String nombre, String apPaterno, String apMaterno, String telefono
         this.correo = correo;
         this.discapacidad = discapacidad;
         this.curp = curp;
-        this.estadoNacimiento = estadoNacimiento;
-        this.sexo= sexo;
+        this.sexo= sexi;
     }
 
     public String getNombre(){
@@ -44,18 +42,21 @@ public Alumno(String nombre, String apPaterno, String apMaterno, String telefono
     public Boolean cuentaConDiscapacidadCheckBox(){
     return discapacidad;
     }
+    public String getCurp(){
+        return curp;
+    }
+    public String getSexo(){
+        return sexo;
+    }
     public String getDiscapacidad(){
     if(discapacidad==true)
         return "si";
     else
         return "no";
     }
-    public String getCurp(){
-    return curp;
-    }
-    public String getSexo(){
-    return sexo;
-    }
 
 
 }
+
+
+

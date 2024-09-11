@@ -51,8 +51,8 @@ public class FRMAlumnos extends JFrame {
         String apmat = TXTapMat.getText();
         String correo = TXTcorreo.getText();
         String numero = TXTnumero.getText();
-        String curp = TXTcurp.getText();
         String sexo = Csexo.getSelectedItem().toString();
+        String curp = TXTcurp.getText();
         Boolean discapacidad = cuentaConDiscapacidadCheckBox.isSelected();
 
         Alumno dato = new Alumno(nombre,apat,apmat,curp,discapacidad,correo,numero,sexo);
@@ -74,7 +74,6 @@ public class FRMAlumnos extends JFrame {
     }
     private void PoblarComboBox(){
         DefaultComboBoxModel <genero> comboBoxModel = (DefaultComboBoxModel<genero>)Csexo.getModel();
-
 
         for (genero generoo  : genero.values()){
             comboBoxModel.addElement(generoo);
