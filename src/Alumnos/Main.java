@@ -24,6 +24,8 @@ public class Main {
                         System.out.println("Sexo "+persona.getSexo());
                         System.out.println("Curp "+persona.getCurp());
                         System.out.println("Discapacidad "+persona.getDiscapacidad());
+                        System.out.println("Edad: " + persona.calcularEdadCurp());
+
 
                         Path path= Path.of("/Users/pako/Desktop/archivo.txt");
                         String contenido = persona.getNombre();
