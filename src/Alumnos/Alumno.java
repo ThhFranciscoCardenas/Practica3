@@ -56,9 +56,9 @@ public Alumno(String nombre, String apPaterno, String apMaterno,String curp,Bool
     }
     public String getDiscapacidad(){
     if(discapacidad==true)
-        return "si";
+        return "SI, Cuenta con alguna discapacidad";
     else
-        return "no";
+        return "NO tiene ninguna discapacidad";
     }
 
 
@@ -81,7 +81,7 @@ public Alumno(String nombre, String apPaterno, String apMaterno,String curp,Bool
         try {
             fechaNacimiento = LocalDate.of(año, mes, dia);
         } catch (DateTimeParseException e) {
-            System.out.println("Error al analizar la fecha: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
             return -1;
         }
 

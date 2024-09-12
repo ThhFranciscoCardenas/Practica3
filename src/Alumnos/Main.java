@@ -28,7 +28,17 @@ public class Main {
 
 
                         Path path= Path.of("/Users/pako/Desktop/archivo.txt");
-                        String contenido = persona.getNombre();
+                        String contenido = "Nombre: "+persona.getNombre()+"\n"+
+                                           "Apellido Paterno: "+persona.getApPaterno() + "\n"+
+                                           "Apellido Materno: "+persona.getApMaterno() + "\n"+
+                                           "Correo: " + persona.getCorreo() + "\n"+
+                                           "Telefono: "+ persona.getTelefono() + "\n"+
+                                           "Sexo: "+ persona.getSexo() + "\n"+
+                                           "CURP: "+ persona.getCurp() + "\n"+
+                                           "Discapacidad: "+ persona.getDiscapacidad()+ "\n"+
+                                           "Edad: "+persona.calcularEdadCurp()+"\n";
+                                ;
+
 
                         try(FileWriter archivo = new FileWriter(path.toFile(),true)){
                             PrintWriter pw = new PrintWriter(archivo);
